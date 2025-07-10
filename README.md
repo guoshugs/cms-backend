@@ -1,45 +1,114 @@
-# LeadNews 后台管理系统
+# LeadNews CMS Backend
 
-这是一个基于 Spring Boot 微服务架构实现的内容管理系统（CMS）后台项目，包含用户管理、内容审核、文章发布、数据统计等核心功能模块。
+LeadNews is a modular, microservices-based **Content Management System (CMS)** backend built with **Java**, **Spring Boot**, and **Spring Cloud Alibaba**. Designed for managing a complete digital news publishing system, it supports user management, content moderation, article publishing workflows, search indexing, real-time statistics, and more.
 
-## 技术栈
-
-- Java 8
-- Spring Boot / Spring Cloud Alibaba
-- MySQL / Redis
-- Nacos 注册中心
-- RabbitMQ 消息队列
-- Elasticsearch 搜索引擎
-- Docker（支持容器部署）
-- Git / GitHub
-
-## 模块说明
-
-| 模块名               | 描述                        |
-|----------------------|-----------------------------|
-| leadnews-api         | 统一接口定义层              |
-| leadnews-common      | 公共模块（常量、工具类等）  |
-| leadnews-common-db   | 数据库操作工具封装          |
-| leadnews-core        | 业务核心模块                |
-| leadnews-gateway     | Spring Cloud 网关           |
-| leadnews-service     | 服务模块集成入口            |
-
-## 数据库配置（仅供开发测试）
-
-数据库地址为内网地址（192.168.211.128），用户名为 `root`，密码为 `123456`。  
-项目部署仅限个人局域网学习使用。
-
-## 启动方式
-
-1. 安装并启动 MySQL、Redis、Nacos 等服务
-2. 修改 `application.yml` 中相关配置
-3. 使用 IDEA 或命令行运行 `leadnews-gateway` 模块
-4. 访问接口进行调试或开发
-
-## 注意事项
-
-⚠️ 此项目已移除云服务密钥等敏感信息，部署请使用自己的配置。
+This project is built for learning, academic demonstration, and private deployment purposes.
 
 ---
 
-项目仅用于个人学习和申请使用，非商用。
+## 🌐 Features
+
+- ✅ **Microservices architecture** with Spring Cloud Gateway and Nacos
+- ✅ **Modular service separation** for API, user, admin, content, search, and statistics
+- ✅ **Database design** optimized for relational and non-relational data (MySQL + Redis)
+- ✅ **Content audit and publishing workflows**
+- ✅ **Search engine integration** with Elasticsearch
+- ✅ **Asynchronous communication** using RabbitMQ
+- ✅ **Real-time data analysis** with log collection and user feedback handling
+- ✅ **Authentication and role-based access control**
+- ✅ **Containerized deployment** ready via Docker
+
+---
+
+## 🧰 Tech Stack
+
+| Layer        | Technology                                    |
+|--------------|-----------------------------------------------|
+| Language     | Java 11                                       |
+| Framework    | Spring Boot, Spring Cloud, Spring Security    |
+| Microservices| Nacos, Gateway, OpenFeign                     |
+| Database     | MySQL, Redis                                  |
+| Messaging    | RabbitMQ                                      |
+| Search       | Elasticsearch                                 |
+| Logging      | Logback, Spring AOP                           |
+| Tools        | Docker, Lombok, Maven                         |
+| Dev Tools    | IDEA, Git, GitHub                             |
+
+---
+
+## 🧱 Module Breakdown
+
+| Module                     | Description                                                                 |
+|----------------------------|-----------------------------------------------------------------------------|
+| `leadnews-api`             | OpenFeign interface declarations for inter-service communication            |
+| `leadnews-common`          | Shared constants, utilities, and configuration                             |
+| `leadnews-common-db`       | MyBatis-Plus configuration and base entities                               |
+| `leadnews-core`            | Core business logic shared across services                                 |
+| `leadnews-gateway`         | Spring Cloud Gateway for routing and token validation                      |
+| `leadnews-service`         | Concrete services for user, admin, content, media, and statistics handling |
+
+---
+
+## ⚙️ How to Run (Local Dev)
+
+1. **Prepare Local Services**:
+   - MySQL (`192.168.211.128:3306`)
+   - Redis (`6379`)
+   - Nacos (`192.168.211.128:8848`)
+   - RabbitMQ and Elasticsearch if needed
+
+2. **Set up MySQL Database**:
+   - Create databases (e.g., `leadnews_admin`, `leadnews_article`, etc.)
+   - Import SQL files if available
+
+3. **Edit Configuration**:
+   - Adjust DB config in each `application.yml` (host, port, password)
+   - Ensure all services point to correct Nacos and DB
+
+4. **Run Services**:
+   - Start `leadnews-gateway`
+   - Start needed services in `leadnews-service/*`
+
+5. **Access API**:
+   - Visit: `http://localhost:9000/` (via gateway)
+
+---
+
+## 🔒 Security Notes
+
+- All secrets (e.g., `aliyun.properties`) have been removed before publishing.
+- The system uses default local DB credentials (e.g., `root/123456`) and **is not exposed to the public internet**.
+- Environment-specific settings (such as `Nacos`, `Redis`, `RabbitMQ`) are designed for **internal/private use only**.
+
+---
+
+## 📁 Sample Directory Structure
+
+leadnews/
+├── leadnews-api/
+├── leadnews-common/
+├── leadnews-common-db/
+├── leadnews-core/
+├── leadnews-gateway/
+├── leadnews-service/
+│ ├── leadnews-admin/
+│ ├── leadnews-article/
+│ ├── leadnews-media/
+│ ├── leadnews-search/
+│ └── leadnews-user/
+└── pom.xml
+
+
+---
+
+## 📄 License
+
+This project is intended for academic use only and is published under the MIT License.
+
+---
+
+## 🔗 Project Link
+
+GitHub Repository: [https://github.com/guoshugs/cms-backend](https://github.com/guoshugs/cms-backend)
+
+---
