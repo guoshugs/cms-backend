@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>leadnews</artifactId>
+        <groupId>com.leadnews</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>leadnews-service</artifactId>
+    <packaging>pom</packaging>
+    <description>所有微服务所在服务工程</description>
+    <modules>
+        <module>leadnews-service-admin</module>
+        <module>leadnews-service-user</module>
+        <module>leadnews-service-article</module>
+        <module>leadnews-service-wemedia</module>
+        <module>leadnews-service-dfs</module>
+        <module>leadnews-service-behaviour</module>
+        <module>leadnews-service-comment</module>
+        <module>leadnews-service-search</module>
+        <module>leadnews-service-sync</module>
+    </modules>
+    <dependencies>
+<!--        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-spring-boot-starter</artifactId>
+            <version>${seata.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.seata</groupId>
+                    <artifactId>seata-spring-boot-starter</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.leadnews</groupId>
+            <artifactId>leadnews-core-knife4j</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+</project>

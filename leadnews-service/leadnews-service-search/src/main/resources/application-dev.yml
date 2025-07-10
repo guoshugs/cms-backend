@@ -1,0 +1,27 @@
+server:
+  port: 9008
+spring:
+  application:
+    name: leadnews-search
+  profiles: dev
+  datasource:
+    # jdbc/mysql里那三张表是保存历史记录和关联词，但这里没有必要用。后续用redis来保存用户的搜索记录。
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.211.128:3306/leadnews_search?useSSL=false&useUnicode=true&characterEncoding=UTF8&serverTimezone=&serverTimezone=Asia/Shanghai
+    username: root
+    password: ${DB_PASSWORD}
+  cloud:
+    nacos:
+      server-addr: 192.168.211.128:8848
+  redis:
+    host: 192.168.211.128
+    port: 6379
+  elasticsearch:
+    rest:
+      uris:
+        - http://192.168.211.128:9200
+# 设置Mapper接口所对应的XML文件位置，如果你在Mapper接口中有自定义方法，需要进行该配置
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  # 设置别名包扫描路径，通过该属性可以给包中的类注册别名
+  type-aliases-package: com.leadnews.search.pojo

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.leadnews.article.mapper.ApArticleMapper">
+    <!--  <![CDATA[内容]]> 内容是原封不动输出，解决转义问题；在xml 属于注释作用  xsd, ddt -->
+    <select id="findPage" resultType="ApArticle">
+        select aa.* from ap_article aa
+        inner join ap_article_config ac on aa.id=ac.id
+        where ac.is_down=0 and ac.is_delete=0
+        <if test="dto.tag != null and dto.tag!='__all__'">
+            and aa.channel_id=#{dto.tag}
+        </if>
+        <if test="null != loadType and loadType==1">
+            and aa.publish_time <![CDATA[<]]> #{dto.minBehotTime}
+        </if>
+        <if test="null != loadType and loadType==2">
+            and aa.publish_time <![CDATA[>]]> #{dto.maxBehotTime}
+        </if>
+        order by aa.publish_time desc
+        limit 0,#{dto.size}
+    </select>
+    <!--'__all__' 默认频道。-->
+    <!--loadmore下一页，那么查询字段要比上一页的最小值还要小-->
+    <!--loadnew更新，那么查询字段要比上一页的最大值还要大-->
+
+    <select id="loadArticleInfo" parameterType="long" resultType="ArticleInfoVo">
+        select ac.id as 'config.id', ac.article_id as 'config.articleId',
+            ac.is_comment as 'config.isComment',ac.is_forward as 'config.isForward',
+            ac.is_down as 'config.isDown',ac.is_delete as 'config.isDelete',
+            aa.id as 'content.id',aa.article_id as 'content.articleId',aa.content as 'content.content'
+        from ap_article_config ac, ap_article_content aa
+        where ac.id=aa.id and ac.is_down=0 and ac.is_delete=0
+        and ac.id=#{articleId}
+    </select>
+    <!--ac.id=#{articleId}，参数不是id-->
+
+</mapper>

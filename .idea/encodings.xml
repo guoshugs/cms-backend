@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/leadnews-api/leadnews-admin-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-api/leadnews-article-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-api/leadnews-behaviour-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-api/leadnews-comment-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-api/leadnews-dfs-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-api/leadnews-search-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-api/leadnews-user-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-common-db/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-core/leadnews-core-controller/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-core/leadnews-core-knife4j/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-gateway/leadnews-gateway-admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-gateway/leadnews-gateway-app/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-gateway/leadnews-gateway-wemedia/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-service/leadnews-service-admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-service/leadnews-service-article/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-service/leadnews-service-behaviour/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-service/leadnews-service-comment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-service/leadnews-service-dfs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-service/leadnews-service-search/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-service/leadnews-service-sync/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-service/leadnews-service-user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-service/leadnews-service-wemedia/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leadnews-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

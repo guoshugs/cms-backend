@@ -1,0 +1,49 @@
+server:
+  port: 6002
+spring:
+  application:
+    name: leadnews-wemedia-gateway
+  cloud:
+    nacos:
+      server-addr: 192.168.211.128:8848
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]': # 匹配所有请求
+            allowedOrigins: "*" #跨域处理 允许所有的域
+            allowedHeaders: "*"
+            allowedMethods: # 支持的方法
+              - GET
+              - POST
+              - PUT
+              - DELETE
+      routes:
+        # 路由是按照从上到下的顺序来挨个判断的，看哪个断言工厂能满足，就执行放置在前面的，所以要注意顺序
+        # 文件微服
+        - id: dfs
+          uri: lb://leadnews-dfs
+          predicates:
+            - Path=/wemedia/api/v1/material/upload_picture
+          filters:
+            # 接收到请求路径： http://localhost:9091/wemedia/MEDIA/wemedia/api/v1/material/upload_picture
+            # 本来应该转发        http://leadnews-dfs/material/upload_picture
+            # 转发前重写请求路径： http://leadnews-dfs/dfs/upload
+            - RewritePath=/wemedia/api/v1/material/upload_picture,/dfs/upload
+            # 文件微服鉴权，判断是否需要添加素材
+            - AddRequestHeader=from,wemedia-pic
+        # 自媒体登录
+        - id: wemedia-login
+          uri: lb://leadnews-wemedia
+          predicates:
+            # /**两个星星是当前与子目录；/*一个星星是当前目录 原来是Path=/wemedia/**,表示所有请求，但查询请求的路径和登录请求路径格式不一样。得做成2个路由
+            - Path=/wemedia/login/*
+          filters:
+            - StripPrefix=1
+        # 自媒体业务请求
+        - id: wemedia
+          uri: lb://leadnews-wemedia
+          predicates:
+            - Path=/wemedia/api/v1/**
+            #这里之所以只写/wemedia/api/v1/，而没有带上/wemedia/MEDIA/是因为在Nginx中同时代理了该location和/这个location
+          filters:
+            - StripPrefix=3

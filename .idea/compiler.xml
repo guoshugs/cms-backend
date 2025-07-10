@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="leadnews-core-knife4j" />
+        <module name="leadnews-gateway-wemedia" />
+        <module name="leadnews-dfs-api" />
+        <module name="leadnews-common" />
+        <module name="leadnews-service-sync" />
+        <module name="leadnews-admin-api" />
+        <module name="leadnews-article-api" />
+        <module name="leadnews-behaviour-api" />
+        <module name="leadnews-user-api" />
+        <module name="leadnews-service-comment" />
+        <module name="leadnews-service-wemedia" />
+        <module name="leadnews-gateway-admin" />
+        <module name="leadnews-service-dfs" />
+        <module name="leadnews-gateway-app" />
+        <module name="leadnews-comment-api" />
+        <module name="leadnews-common-db" />
+        <module name="leadnews-service-behaviour" />
+        <module name="leadnews-service-user" />
+        <module name="leadnews-service-article" />
+        <module name="leadnews-service-search" />
+        <module name="leadnews-service-admin" />
+        <module name="leadnews-core-controller" />
+        <module name="leadnews-wemedia-api" />
+        <module name="leadnews-search-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="leadnews-admin-api" options="-parameters" />
+      <module name="leadnews-article-api" options="-parameters" />
+      <module name="leadnews-behaviour-api" options="-parameters" />
+      <module name="leadnews-comment-api" options="-parameters" />
+      <module name="leadnews-common" options="-parameters" />
+      <module name="leadnews-common-db" options="-parameters" />
+      <module name="leadnews-core-controller" options="-parameters" />
+      <module name="leadnews-core-knife4j" options="-parameters" />
+      <module name="leadnews-dfs-api" options="-parameters" />
+      <module name="leadnews-gateway-admin" options="-parameters" />
+      <module name="leadnews-gateway-app" options="-parameters" />
+      <module name="leadnews-gateway-wemedia" options="-parameters" />
+      <module name="leadnews-search-api" options="-parameters" />
+      <module name="leadnews-service-admin" options="-parameters" />
+      <module name="leadnews-service-article" options="-parameters" />
+      <module name="leadnews-service-behaviour" options="-parameters" />
+      <module name="leadnews-service-comment" options="-parameters" />
+      <module name="leadnews-service-dfs" options="-parameters" />
+      <module name="leadnews-service-search" options="-parameters" />
+      <module name="leadnews-service-sync" options="-parameters" />
+      <module name="leadnews-service-user" options="-parameters" />
+      <module name="leadnews-service-wemedia" options="-parameters" />
+      <module name="leadnews-user-api" options="-parameters" />
+      <module name="leadnews-wemedia-api" options="-parameters" />
+    </option>
+  </component>
+</project>

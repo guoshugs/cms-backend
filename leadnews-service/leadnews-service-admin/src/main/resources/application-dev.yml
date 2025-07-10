@@ -1,0 +1,46 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: leadnews-admin
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.211.128:3306/leadnews_admin?useSSL=false&useUnicode=true&characterEncoding=UTF8&serverTimezone=Asia/Shanghai
+    username: root
+    password: ${DB_PASSWORD}
+  cloud:
+    nacos:
+      server-addr: 192.168.211.128:8848
+  kafka:
+    consumer:
+      # 配置连接到服务端集群的配置项 ip:port,ip:port
+      bootstrap-servers: 192.168.211.128:9092
+      auto-offset-reset: earliest
+      group-id: admin-consumer-group
+      # 默认值即为字符串
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      # 默认值即为字符串
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+# 设置Mapper接口所对应的XML文件位置，如果你在Mapper接口中有自定义方法，需要进行该配置
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+# knife4j配置
+steven:
+  knife4j:
+    description: 头条项目平台管理系统api
+    title: 头条项目平台管理系统api
+    contact: leadnews
+    serviceUrl:
+xxl:
+  job:
+    accessToken: ''
+    admin:
+      #addresses: http://localhost:8080/xxl-job-admin
+      addresses: http://192.168.211.128:18080/xxl-job-admin
+    executor:
+      appname: leadnews-admin
+      ip: 192.168.211.1
+      # 这里是多少？是因为局域网的环境是随着物理地点而变化的，虽然最好是配本地ip，但不能换地方了。因此这里配的是虚拟机中网络ip
+      logretentiondays: 30
+      port: 19999

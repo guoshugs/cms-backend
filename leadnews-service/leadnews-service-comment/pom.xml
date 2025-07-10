@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>leadnews-service</artifactId>
+        <groupId>com.leadnews</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>leadnews-service-comment</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.leadnews</groupId>
+            <artifactId>leadnews-comment-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.baomidou</groupId>
+                    <artifactId>mybatis-plus</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.leadnews</groupId>
+            <artifactId>leadnews-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+        <!--只引入了web起步以来，没有引入core-controller（它抽取了mybatisplus的通用业务层）。引入了core-controller，会把mybatis的起步以来引进来-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--用户comment之后需要由kafka流处理器聚合统计，更新article文章属性并重算推荐分数-->
+        <dependency>
+            <groupId>com.leadnews</groupId>
+            <artifactId>leadnews-behaviour-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- kafka依赖 begin -->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ef2febf6-2379-4aee-8b41-00a062fde88e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-dfs-api/target/classes/com/itheima/dfs/feign/DfsFeign.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-search-api/target/classes/com/itheima/search/document/ArticleInfoDocument.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-search-api/target/classes/com/itheima/search/dto/HistoryLoadDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-search-api/target/classes/com/itheima/search/dto/SearchDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-search-api/target/classes/com/itheima/search/pojo/ApAssociateWords.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-search-api/target/classes/com/itheima/search/pojo/ApHotWords.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-search-api/target/classes/com/itheima/search/pojo/ApUserSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-user-api/target/classes/com/itheima/user/dto/LoginDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-user-api/target/classes/com/itheima/user/dto/UserRelationDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-user-api/target/classes/com/itheima/user/feign/ApUserFollowFeign.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-user-api/target/classes/com/itheima/user/pojo/ApUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-user-api/target/classes/com/itheima/user/pojo/ApUserArticleList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-user-api/target/classes/com/itheima/user/pojo/ApUserChannel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-user-api/target/classes/com/itheima/user/pojo/ApUserDynamicList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-user-api/target/classes/com/itheima/user/pojo/ApUserEquipment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-user-api/target/classes/com/itheima/user/pojo/ApUserFan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-user-api/target/classes/com/itheima/user/pojo/ApUserFeedback.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-user-api/target/classes/com/itheima/user/pojo/ApUserFollow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-user-api/target/classes/com/itheima/user/pojo/ApUserIdentity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-user-api/target/classes/com/itheima/user/pojo/ApUserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-user-api/target/classes/com/itheima/user/pojo/ApUserLetter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-user-api/target/classes/com/itheima/user/pojo/ApUserMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-user-api/target/classes/com/itheima/user/pojo/ApUserRealname.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-user-api/target/classes/com/itheima/user/pojo/ApUserSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/dto/DownOrUpDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/dto/WmNewsContentNodeDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/dto/WmNewsDtoSave.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/dto/WmNewsPageReqDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/feign/WmMaterialFeign.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/feign/WmNewsFeign.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/feign/WmUserFeign.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/pojo/WmFansPortrait.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/pojo/WmFansStatistics.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/pojo/WmMaterial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/pojo/WmNews.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/pojo/WmNewsMaterial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/pojo/WmNewsStatistics.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/pojo/WmSubUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/pojo/WmUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/pojo/WmUserAuth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/pojo/WmUserEquipment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/pojo/WmUserLogin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-api/leadnews-wemedia-api/target/classes/com/itheima/wemedia/vo/WmNewsVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leadnews-service/leadnews-service-admin/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/leadnews-service/leadnews-service-admin/src/main/resources/application-dev.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="$PROJECT_DIR$/../../../users/apache-maven-3.6.1" />
+        <option name="localRepository" value="$PROJECT_DIR$/../../../users/Maven/repository" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+        <option name="userSettingsFile" value="$PROJECT_DIR$/../../../users/apache-maven-3.6.1/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="#JAVA_HOME" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+        <option name="workspaceImportForciblyTurnedOn" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="#JAVA_HOME" />
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2zexx9ibAkm57es9Pt8hLF9beV8" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/workspace/apply/leadnews&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.36206895&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-ae57be32" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef2febf6-2379-4aee-8b41-00a062fde88e" name="Changes" comment="" />
+      <created>1752105584283</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752105584283</updated>
+      <workItem from="1752105585752" duration="505000" />
+      <workItem from="1752106101248" duration="1664000" />
+      <workItem from="1752108527587" duration="347000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

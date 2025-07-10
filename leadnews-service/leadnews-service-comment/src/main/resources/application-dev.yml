@@ -1,0 +1,25 @@
+server:
+  port: 9007
+spring:
+  application:
+    name: leadnews-comment
+  cloud:
+    nacos:
+      server-addr: 192.168.211.128:8848
+  data:
+    mongodb:
+      # host+port+database 单机配置
+      host: 192.168.211.128
+      port: 27017
+      database: leadnews-comment
+      # 集群配置, 多个以分割
+      #uri: mongodb://ip:port/数据库名,mongodb://ip:port/数据库名,mongodb://ip:port/数据库名
+  kafka:
+    # 配置连接到服务端集群的配置项 ip:port,ip:port
+    bootstrapServers: 192.168.211.128:9092
+    producer:
+      batchSize: 16384
+      bufferMemory: 33554432
+      retries: 10
+      keySerializer: org.apache.kafka.common.serialization.StringSerializer
+      valueSerializer: org.apache.kafka.common.serialization.StringSerializer

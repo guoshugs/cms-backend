@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>leadnews</artifactId>
+        <groupId>com.leadnews</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>leadnews-api</artifactId>
+    <packaging>pom</packaging>
+    <description>所有feign pojo所在父工程</description>
+    <modules>
+        <module>leadnews-admin-api</module>
+        <module>leadnews-user-api</module>
+        <module>leadnews-article-api</module>
+        <module>leadnews-wemedia-api</module>
+        <module>leadnews-dfs-api</module>
+        <module>leadnews-behaviour-api</module>
+        <module>leadnews-comment-api</module>
+        <module>leadnews-search-api</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.leadnews</groupId>
+            <artifactId>leadnews-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--在使用默认Feign的时候，底层实际上使用restTemplate，而RestTemplate底层有使用了httpclient，
+        默认使用java自带的httpUrlConnection。默认feign调用httpUrlConnection每次都会创建一个连接对象，
+        效率较低，使用了很多内存，所以用okhttp来代替，它可以使用连接池，调用效率较高。可以配置每个微服务里面的线程数
+        就做到了舱壁隔离，线程隔离的效果就出来了。加上之后，还得加上超时的时间。
+        在api工程引入远程调用连接线程池，说明要远程调用，所有调用的微服务就都带上了。
+        并且要在实际的调用者微服务中，配置上Feign的超时时间。-->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-okhttp</artifactId>
+        </dependency>
+    </dependencies>
+</project>

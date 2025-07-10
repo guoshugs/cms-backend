@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>leadnews-service</artifactId>
+        <groupId>com.leadnews</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>leadnews-service-user</artifactId>
+
+    <dependencies>
+        <!-- 因为user接收参数用的实体类在api工程中，所以在user中导入user-api-->
+        <dependency>
+            <groupId>com.leadnews</groupId>
+            <artifactId>leadnews-user-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- 因为user远程调用wemedia，不能引入工程本身，会过耦合相互依赖，要引入wemedia向外提供的服务接口-api工程-->
+        <dependency>
+            <groupId>com.leadnews</groupId>
+            <artifactId>leadnews-wemedia-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.leadnews</groupId>
+            <artifactId>leadnews-article-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.leadnews</groupId>
+            <artifactId>leadnews-behaviour-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.leadnews</groupId>
+            <artifactId>leadnews-common-db</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.leadnews</groupId>
+            <artifactId>leadnews-core-controller</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- kafka依赖 begin 用于用户微服务向行为微服务发消息-->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+    </dependencies>
+
+
+</project>

@@ -1,0 +1,27 @@
+server:
+  port: 6003
+spring:
+  application:
+    name: leadnews-app-gateway
+  cloud:
+    nacos:
+      server-addr: 192.168.211.128:8848
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]': # 匹配所有请求
+            allowedOrigins: "*" #跨域处理 允许所有的域
+            allowedHeaders: "*"
+            allowedMethods: # 支持的方法
+              - GET
+              - POST
+              - PUT
+              - DELETE
+      routes:
+        # 用户微服
+        - id: user
+          uri: lb://leadnews-user
+          predicates:
+            - Path=/user/api/v1/**
+          filters:
+            - StripPrefix=3
