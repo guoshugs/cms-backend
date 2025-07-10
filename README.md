@@ -24,7 +24,7 @@ This project is built for learning, academic demonstration, and private deployme
 
 | Layer        | Technology                                    |
 |--------------|-----------------------------------------------|
-| Language     | Java 11                                       |
+| Language     | Java 8                                       |
 | Framework    | Spring Boot, Spring Cloud, Spring Security    |
 | Microservices| Nacos, Gateway, OpenFeign                     |
 | Database     | MySQL, Redis                                  |
