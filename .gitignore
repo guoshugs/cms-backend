@@ -1,0 +1,15 @@
+echo "target/
+*.log
+*.iml
+.idea/
+*.class
+.DS_Store
+*.jar
+*.war
+*.db
+*.xlsx
+" > .gitignore
+
+git add .gitignore
+git commit -m "Add .gitignore"
+git push
