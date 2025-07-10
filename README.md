@@ -82,21 +82,21 @@ This project is built for learning, academic demonstration, and private deployme
 
 ---
 
-## 📁 Sample Directory Structure
+### 📦 Module Details
 
-leadnews/
-├── leadnews-api/
-├── leadnews-common/
-├── leadnews-common-db/
-├── leadnews-core/
-├── leadnews-gateway/
-├── leadnews-service/
-│ ├── leadnews-admin/
-│ ├── leadnews-article/
-│ ├── leadnews-media/
-│ ├── leadnews-search/
-│ └── leadnews-user/
-└── pom.xml
+| Module Name             | Description                                                                 |
+|-------------------------|-----------------------------------------------------------------------------|
+| `leadnews-api`          | Feign client interfaces for remote service communication                   |
+| `leadnews-common`       | Shared utility classes, constants, enums                                    |
+| `leadnews-common-db`    | MyBatis-Plus base config, auto-fill, ID generation                          |
+| `leadnews-core`         | Core service logic, JWT utils, request context tools                        |
+| `leadnews-gateway`      | API Gateway using Spring Cloud Gateway with token filter                    |
+| `leadnews-service`      | Grouped submodules for business services:                                   |
+| └─ `leadnews-admin`     | Admin user login, content audit, permission management                      |
+| └─ `leadnews-article`   | Article CRUD, draft & publish logic, audit workflow                         |
+| └─ `leadnews-media`     | Media platform article/media management                                     |
+| └─ `leadnews-search`    | Elasticsearch indexing and search                                            |
+| └─ `leadnews-user`      | App-side user registration, login, profile update, behavior tracking         |
 
 
 ---
